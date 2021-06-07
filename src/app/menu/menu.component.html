@@ -1,0 +1,41 @@
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar-->
+  <div class="border-end bg-white" id="sidebar-wrapper">
+    <div class="d-flex justify-content-center mt-3">
+      <img src="https://i.imgur.com/vxwyTQr.jpg" class="img-fluid rounded-circle" alt="Foto do Thiago Lima" width="100">
+    </div>
+
+    <div class="sidebar-heading border-bottom text-center">Thiago Lima</div>
+    <div class="list-group list-group-flush">
+      <a class="list-group-item list-group-item-action list-group-item-light p-3" routerLink='/sobre' (click)='titulos("Sobre mim")'>Sobre mim</a>
+      <a class="list-group-item list-group-item-action list-group-item-light p-3" routerLink='/passatempos' (click)='titulos("Passatempos")'>Passatempos</a>
+      <a class="list-group-item list-group-item-action list-group-item-light p-3" routerLink='/formacao' (click)='titulos("Formação")'>Formação</a>
+      <a class="list-group-item list-group-item-action list-group-item-light p-3" routerLink='/profissional' (click)='titulos("Profissional")'>Profissional</a>
+      <a class="list-group-item list-group-item-action list-group-item-light p-3" routerLink='/projetos' (click)='titulos("Projetos")'>Projetos</a>
+      <a class="list-group-item list-group-item-action list-group-item-light p-3" routerLink='/tecnologias' (click)='titulos("Tecnologias")'>Tecnologias</a>
+      <a class="list-group-item list-group-item-action list-group-item-light p-3" routerLink='/contato' (click)='titulos("Contato")'>Contato</a>
+    </div>
+  </div>
+  <!-- Page content wrapper-->
+  <div id="page-content-wrapper">
+    <!-- Top navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom">
+      <div class="container-fluid">
+        <a class="text-white ps-3 fs-3" id="sidebarToggle"><i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+            class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+            <li class="nav-item text-white fw-bold pe-3 fs-4">{{auth.titulos()}}</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Page content-->
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
